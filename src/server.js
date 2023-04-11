@@ -1,10 +1,14 @@
+// import "./db";
+// import "./models/Video";
+
 import express from "express";
 import morgan from "morgan";
+
 import globalRouter from "./routes/globalRouter";
 import userRouter from "./routes/userRouter";
 import videoRouter from "./routes/videoRouter";
 
-const PORT = 4000;
+// const PORT = 4000;
 
 const app = express();
 const logger = morgan("dev");
@@ -27,7 +31,9 @@ const login = (req, res) => {
 app.get("/", home);
 app.get("/login", login);
 
-const handleListening = () =>
-    console.log(`Server listening on port http://localhost:${PORT}🤖`);
+// const handleListening = () =>
+//     console.log(`✅ Server listening on port http://localhost:${PORT}🤖`);
 
-app.listen(PORT, handleListening);
+// app.listen(PORT, handleListening);
+
+module.exports = app;
